@@ -77,10 +77,25 @@ h4 {
     line-height: 32px;
     font-weight: 400;
 }
+
 .text-description {
     font-size: 16px;
     line-height: 32px;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 599px) {
+    h1 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    h4 {
+        font-size: 18px;
+    }
 }
 
 
@@ -134,6 +149,32 @@ nav .contact-button {
     place-content: center;
 }
 
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 799px) {
+    .hamburger {
+        cursor: pointer;
+        display: grid;
+        place-content: center;
+        row-gap: 6px;
+        padding: 4px 2px;
+        margin-right: 5px;
+    }
+
+    .hamburger__line {
+        width: 24px;
+        height: 4px;
+        background: #ffffff;
+    }
+
+    nav .nav-links, nav .contact-button {
+        display: none;
+    }
+
+}
+
 
 /*
     HERO SECTION
@@ -180,8 +221,7 @@ nav .contact-button {
     margin-top: 9px;
 }
 
-
-.hero img {
+.hero .right img {
     position: absolute;
 }
 
@@ -237,15 +277,19 @@ nav .contact-button {
     cursor: pointer;
     width: 48px;
     height: 48px;
+    position: relative;
     top: 30%;
 }
 
 @media screen and (max-width: 1023px) {
+    .hero .container {
+        column-gap: 10px;
+    }
+
     .hero .left {
         grid-column: 2 / 4;
         text-align: center;
         align-items: center;
-
     }
 
     .hero .right {
@@ -253,8 +297,29 @@ nav .contact-button {
         justify-self: center;
         max-width: min(80%, 460px);
     }
+
+    .hero .arrow-wrapper {
+        grid-row: 1 / 3;
+    }
+
+    .hero .arrow-wrapper--right {
+        grid-column: 4/5;
+    }
 }
 
+@media screen and (max-width: 599px) {
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero .container {
+        padding: 0 10px;
+    }
+
+    .hero .right {
+        max-width: max(80%, 300px);
+    }
+}
 
 /*
     ABOUT SECTION
@@ -376,6 +441,17 @@ nav .contact-button {
     }
 }
 
+@media screen and (max-width: 599px) {
+    .about {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .about .container {
+        padding: 0 16px;
+    }
+}
+
 
 /*
     STATS SECTION
@@ -429,8 +505,25 @@ nav .contact-button {
     .stats {
         padding-top: 60px;
     }
+
+    .stats .heading {
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 32px;
+    }
+
     .stats .items {
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .stats {
+        padding-bottom: 80px;
+    }
+    .stats .items {
+        flex-direction: column;
+        row-gap: 50px;
     }
 }
 
@@ -519,6 +612,29 @@ nav .contact-button {
 
     .easy-steps .item:nth-child(2n+1) {
         justify-self: end;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .easy-steps .container {
+        padding: 0 16px;
+    }
+
+    .easy-steps .items {
+        text-align: center;
+    }
+
+    .easy-steps h1 {
+        margin: 15px auto;
+    }
+
+    .easy-steps .item {
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .easy-steps .item:nth-child(2n+1) {
+        justify-self: center;
     }
 }
 
@@ -659,6 +775,12 @@ nav .contact-button {
     }
 }
 
+@media screen and (max-width: 599px) {
+    .service {
+        padding: 100px 0;
+    }
+}
+
 
 
 /*
@@ -746,6 +868,25 @@ nav .contact-button {
 @media screen and (max-width: 799px) {
     .transport .szlaczek4, .transport2 .szlaczek6 {
         display: none;
+    }
+
+    .transport .box {
+        padding: 24px 12px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .transport .container {
+        padding: 0 8px;
+    }
+
+    .transport .box {
+        row-gap: 20px;
+        border-radius: 5px;
+    }
+
+    .transport .text-wrapper {
+        margin-bottom: 0;
     }
 }
 
@@ -868,6 +1009,25 @@ nav .contact-button {
     }
 }
 
+@media screen and (max-width: 599px) {
+    .our-team {
+        padding: 60px 0;
+    }
+
+    .our-team .header-wrapper {
+        text-align: center;
+    }
+
+    .our-team .content-wrapper {
+        padding: 40px 30px;
+    }
+
+    .our-team .photo {
+        width: 268px;
+        height: 256px;
+    }
+}
+
 
 /*
     QUOTATION SECTION
@@ -921,6 +1081,37 @@ nav .contact-button {
     font-size: 16px;
     line-height: 32px;
     opacity: 0.5;
+}
+
+@media screen and (max-width: 599px) {
+    .quotation {
+        padding: 30px 0;
+    }
+
+    .quotation .apo {
+        font-size: 64px;
+        line-height: 64px;
+        margin-bottom: 0;
+    }
+
+    .quotation .text {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .quotation img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .quotation .name {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    .quotation .author {
+        column-gap: 10px;
+    }
 }
 
 
@@ -1104,6 +1295,32 @@ nav .contact-button {
         grid-column: 1 / -1;
         z-index: 0;
     }
+
+    .cost .right .heading {
+        margin: auto 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .cost .container {
+        padding: 0 16px;
+    }
+
+    .cost .left {
+        margin-left: 0;
+    }
+    .cost .box {
+        width: 100%;
+    }
+
+    .cost .szlaczek5 {
+        display: none;
+    }
+
+    .cost .right .heading {
+        padding-bottom: 5px;
+    }
 }
 
 /*
@@ -1229,6 +1446,38 @@ nav .contact-button {
     }
 }
 
+@media screen and (max-width: 799px) {
+    .faq .container {
+        padding: 80px 20px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .faq {
+        padding: 40px 16px;
+    }
+
+    .faq .logo2 {
+        display: none;
+    }
+
+    .faq .logo {
+        max-width: 100%;
+    }
+
+    .faq .questions {
+        margin-bottom: 100px;
+    }
+
+    .faq .questions__item .question {
+        font-size: 22px;
+    }
+
+    .faq .answer {
+        padding: 20px;
+    }
+}
+
 
 /*
     CONTACT SECTION
@@ -1311,6 +1560,12 @@ nav .contact-button {
 
     .contact .right {
         grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .contact .item__text {
+        font-size: 18px;
     }
 }
 
@@ -1431,6 +1686,14 @@ footer .bottom__right {
 
     footer .main-content__menu, footer .main-content__service {
         grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    footer .container {
+        padding: 0 30px;
+    }
+
+    footer .copyright-text {
         text-align: center;
     }
 }
