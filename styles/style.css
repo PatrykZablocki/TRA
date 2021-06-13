@@ -1469,43 +1469,30 @@ nav .contact-button {
 }
 
 .faq .brands-wrapper {
-    padding: 0 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.logo {
+    width: 100%;
 }
 
 .faq .logo1 {
-    width: 191px;
-    height: 54px;
+    max-width: 191px;
+    max-height: 54px;
 }
 .faq .logo2 {
-    width: 140px;
-    height: 52px;
+    max-width: 140px;
+    max-height: 52px;
 }
 .faq .logo3 {
-    width: 152px;
-    height: 61px;
+    max-width: 152px;
+    max-height: 61px;
 }
 .faq .logo4 {
-    width: 112px;
-    height: 50px;
-}
-
-@media screen and (max-width: 1199px) {
-    .faq .logo4 {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .faq .logo3 {
-        display: none;
-    }
-
-    .faq .brands-wrapper {
-        justify-content: space-around;
-    }
+    max-width: 112px;
+    max-height: 50px;
 }
 
 @media screen and (max-width: 799px) {
@@ -1517,14 +1504,6 @@ nav .contact-button {
 @media screen and (max-width: 599px) {
     .faq {
         padding: 40px 16px;
-    }
-
-    .faq .logo2 {
-        display: none;
-    }
-
-    .faq .logo {
-        max-width: 100%;
     }
 
     .faq .questions {
